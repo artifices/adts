@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2F00503F-F058-4540-B06B-D9CDE3BD46DD}</ProjectGuid>
+    <RootNamespace>TADs</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.51106.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\Framework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\Framework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework\Framework.vcxproj">
+      <Project>{bfebc764-e943-4265-a9d5-85afdbe712e7}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GrafoAvlsAdy.cpp" />
+    <ClCompile Include="GrafoTablasAdy.cpp" />
+    <ClCompile Include="Lista.cpp" />
+    <ClCompile Include="ListaEnlazada.cpp" />
+    <ClCompile Include="ListaEnlazadaIteracion.cpp" />
+    <ClCompile Include="Tabla.cpp" />
+    <ClCompile Include="TablaHashAbierto.cpp" />
+    <ClCompile Include="TablaHashAbiertoIteracion.cpp" />
+    <ClCompile Include="TablaAvl.cpp" />
+    <ClCompile Include="TablaAvlInOrder.cpp" />
+    <ClCompile Include="TablaAvlPosOrder.cpp" />
+    <ClCompile Include="TablaAvlPreOrder.cpp" />
+    <ClCompile Include="TablaLista.cpp" />
+    <ClCompile Include="Grafo.cpp" />
+    <ClCompile Include="GrafoBase.cpp" />
+    <ClCompile Include="GrafoListasAdy.cpp" />
+    <ClCompile Include="GrafoMatrizAdy.cpp" />
+    <ClCompile Include="HeapExtendidoImp.cpp" />
+    <ClCompile Include="HeapImp.cpp" />
+    <ClCompile Include="Mochila.cpp" />
+    <ClCompile Include="Combinaciones.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GrafoAvlsAdy.h" />
+    <ClInclude Include="GrafoTablasAdy.h" />
+    <ClInclude Include="Lista.h" />
+    <ClInclude Include="ListaEnlazada.h" />
+    <ClInclude Include="ListaEnlazadaIteracion.h" />
+    <ClInclude Include="NodoLista.h" />
+    <ClInclude Include="Tabla.h" />
+    <ClInclude Include="TablaHashAbierto.h" />
+    <ClInclude Include="TablaHashAbiertoIteracion.h" />
+    <ClInclude Include="NodoAvl.h" />
+    <ClInclude Include="TablaAvl.h" />
+    <ClInclude Include="TablaAvlInOrder.h" />
+    <ClInclude Include="TablaAvlPosOrder.h" />
+    <ClInclude Include="TablaAvlPreOrder.h" />
+    <ClInclude Include="TablaLista.h" />
+    <ClInclude Include="FuncionCosto.h" />
+    <ClInclude Include="Grafo.h" />
+    <ClInclude Include="GrafoBase.h" />
+    <ClInclude Include="GrafoListasAdy.h" />
+    <ClInclude Include="GrafoMatrizAdy.h" />
+    <ClInclude Include="NodoArco.h" />
+    <ClInclude Include="NodoVertice.h" />
+    <ClInclude Include="Heap.h" />
+    <ClInclude Include="HeapExtendido.h" />
+    <ClInclude Include="HeapExtendidoImp.h" />
+    <ClInclude Include="HeapImp.h" />
+    <ClInclude Include="Mochila.h" />
+    <ClInclude Include="Combinaciones.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
